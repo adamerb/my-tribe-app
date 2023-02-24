@@ -1,0 +1,71 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 12px;
+  height: auto;
+  width: auto;
+}
+
+section {
+  width: auto;
+  margin: 12px 48px 12px 48px;
+  padding: 8px;
+  background-color: antiquewhite;opacity: 0.8;
+  border: solid black 3px;
+  border-radius: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.user-card {
+  margin: auto;
+  margin-bottom: 12px ;
+  padding: 8px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid black 3px;
+  border-radius: 20px;
+  background-color: antiquewhite;opacity: 0.8;
+}
+
+.user-image { 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.collection { 
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
