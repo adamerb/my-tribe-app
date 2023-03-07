@@ -1,18 +1,30 @@
 import './App.css';
+import { useState } from 'react'
+import Login from './components/Login';
 import TribalNavBar from './components/TribalNavBar';
 import TribalEvents from './components/TribalEvents';
 import TribalMeetings from './components/TribalMeetings';
 import TribalMusic from './components/TribalMusic';
 import TribalMembers from './components/TribalMembers';
 
-function App() {
+const App = () => {
+  const [authorize, setAuthorize] = useState();
+
+  if (!authorize) {
+    return <Login setAuthorize={setAuthorize}/>
+  }
+
   return (
-    <div className="App">
-      <TribalNavBar/>
-      <TribalMembers/>
-      <TribalMeetings/>
-      <TribalMusic/>
-      <TribalEvents/>
+      <div className="App">
+        <header>
+          <TribalNavBar/>
+        </header>
+        <main>
+          <TribalMembers/>
+          <TribalMeetings/>
+          <TribalMusic/>
+          <TribalEvents/>
+        </main>
     </div>
   )
 }

@@ -1,0 +1,10 @@
+Port#3306
+MySQL80
+
+MySQL Server 8.0.32
+
+To create: 
+INSERT INTO `public`.`testtable` (`id`, `UserName`, `Password`) VALUES ('3', 'ben', '000');
+
+// TODO List:
+// Store users Cards in Database and render cards from database.

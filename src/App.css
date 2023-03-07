@@ -9,6 +9,10 @@
   width: auto;
 }
 
+.wrapper {
+  padding: 20px;
+}
+
 section {
   width: auto;
   margin: 12px 48px 12px 48px;
@@ -64,6 +68,10 @@ section {
 .nav-link {
   text-decoration: none;
   color: black;
+}
+
+.show-member-btn {
+  margin: 8px;
 }
 
 

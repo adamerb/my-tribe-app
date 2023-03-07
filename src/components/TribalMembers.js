@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import UserCard from './UserCard';
+import '../App.css'
 
 const myTribe = [
   {
     name: 'Adam Erb',
-    aliases: 'Erb, Adam, Erbo',
+    aliases: 'Erb, Adam',
     birthday: 32,
     occupation: 'Unemployed',
     bio: "Life's a garden, dig it."
@@ -17,14 +19,14 @@ const myTribe = [
   },
   {
     name: 'Tho Le',
-    aliases: 'Thollami, Creams, Cream314',
+    aliases: 'Thollami, Tho',
     birthday: 38,
     occupation: 'Software Engineer at Cognosante',
     bio: 'Music with dinner is an insult both to the cook and the violinist.'
   },
   {
     name: 'Grant Gorrell',
-    aliases: 'G Money, Grant, BB Boy',
+    aliases: 'G Money, Grant',
     birthday: 26,
     occupation: 'Client Support Manager at Brightfin',
     bio: 'I cannot pretend to feel impartial about colours. I rejoice with the brilliant ones and am genuinely sorry for the poor browns.'
@@ -38,14 +40,14 @@ const myTribe = [
   },
   {
     name: 'Ryland Richart',
-    aliases: 'Ryelz, Ryley, Chiefzing',
+    aliases: 'Ryelz, Ryley',
     birthday: 26,
     occupation: 'Home Energy Performance Specialist',
     bio: 'Frisbeetarianism is the belief that when you die, your soul goes up on the roof and gets stuck.'
   },
   {
     name: 'Peter Vu',
-    aliases: 'Peeeta, Peter, I said Biiii',
+    aliases: 'Peeeta, Peter',
     birthday: 26,
     occupation: 'Aircraft Maintenance Technician at UPS',
     bio: 'Affirmations are like prescriptions for certain aspects of yourself you want to change.'
@@ -85,14 +87,19 @@ const sortUsers = (userList) => {
     })
 }
 
+
+
 const TribalMembers = () => {
+  const [showMembers, setShowMembers] = useState(false)
+
     return (
-        <>
+        <section id='tribal-members'>
         <h2>Tribe Members:</h2>
+        <button className='show-member-btn' onClick={() => setShowMembers(!showMembers)}>{showMembers ? 'Hide Members' : 'Show Members'}</button>
         <div className='collection'>
-            {sortUsers(myTribe).map(tribeMember => <UserCard key={tribeMember.name} tribeMember={tribeMember}/>)}
+           {showMembers && sortUsers(myTribe).map(tribeMember => <UserCard key={tribeMember.name} tribeMember={tribeMember}/>)}
         </div>
-        </>
+        </section>
     )
 }
 

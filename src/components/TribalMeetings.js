@@ -1,6 +1,6 @@
 const TribalMeetings = () => {
     return (
-        <section>
+        <section id='tribal-meetings'>
             <h3>Tribe Meetings</h3>
             <p><strong>Next meeting location and time:</strong>TBD; Wednesday, March 1, 2023</p>
             <p>This drop down will hold dates of previous meetings...</p>
