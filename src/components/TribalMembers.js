@@ -7,7 +7,7 @@ const myTribe = [
     name: 'Adam Erb',
     aliases: 'Erb, Adam',
     birthday: 32,
-    occupation: 'Unemployed',
+    occupation: 'Student At Tho Le"s Academy of Excellence',
     bio: "Life's a garden, dig it."
   },
   {
