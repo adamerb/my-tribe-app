@@ -1,7 +1,6 @@
 export const authenticateUser = (req, res, db) => {
     const { body } = req
     const { username, password } = body
-    // let users
     
     // See if user exists in database
     db.query(`SELECT * FROM 'testtable' WHERE UserName='${username}' AND Password='${password}'`), (error, results, fields) => {
@@ -17,7 +16,5 @@ export const authenticateUser = (req, res, db) => {
                 successful: true,
             })
         }
-        console.log('results:',results)
-        console.log('fields',fields)
     }
 }
